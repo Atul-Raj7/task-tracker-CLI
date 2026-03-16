@@ -1,0 +1,12 @@
+{
+  "name": "task-tracker",
+  "version": "1.0.0",
+  "description": "A task-tracking CLI application.",
+  "license": "ISC",
+  "author": "Atul Raj",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  }
+}
