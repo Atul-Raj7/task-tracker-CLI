@@ -12,6 +12,11 @@ function readTask () {
   return []
 }
 
+//write
+function writeTask (tasks) {
+  fs.writeFileSync(filePath, JSON.stringify(tasks), "utf-8")
+}
+
 //add
 
 //update
