@@ -37,8 +37,7 @@ function addTask () {
   const newTask = {
     id: getNextId(tasks),
     description: "We are here for testing",
-    completed: false,
-    inProgress: false,
+    status: "in-progress",
     createdAt: timeStamp
   }
   tasks.push(newTask)
@@ -63,7 +62,16 @@ function deleteTask (id) {
   writeTask(removeTask)
 }
 
-//mark of progress and done
+//Marking of Task - inProgress || Done || To-Do
+function setStatus (id, status) {
+  const tasks = readTask()
+  const setStatus = tasks.find(task => task.id === id)
+  if(setStatus){
+    setStatus.status = status
+    writeTask(tasks)
+  }
+}
+
 // list all task
 // list that are done
 // list that are in progress
