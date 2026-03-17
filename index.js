@@ -57,6 +57,12 @@ function updateTask (id, description) {
 }
 
 //delete
+function deleteTask (id) {
+  const tasks = readTask()
+  const removeTask = tasks.filter(removeTask => removeTask.id !== id)
+  writeTask(removeTask)
+}
+
 //mark of progress and done
 // list all task
 // list that are done
