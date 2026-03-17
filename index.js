@@ -1,3 +1,4 @@
+const { time } = require("console")
 const fs = require("fs")
 const path = require("path")
 
@@ -32,11 +33,11 @@ function getNextId (tasks){
     }
 
 //add
-function addTask () {
+function addTask (description) {
   const tasks = readTask()
   const newTask = {
     id: getNextId(tasks),
-    description: "We are here for testing",
+    description: description,
     status: "in-progress",
     createdAt: timeStamp
   }
@@ -63,15 +64,33 @@ function deleteTask (id) {
 }
 
 //Marking of Task - inProgress || Done || To-Do
-function setStatus (id, status) {
+function mark (id, status) {
   const tasks = readTask()
   const setStatus = tasks.find(task => task.id === id)
   if(setStatus){
     setStatus.status = status
+    setStatus.updatedAt = timeStamp
     writeTask(tasks)
   }
 }
 
-// list all task
-// list that are done
-// list that are in progress
+// list
+function list (filter){
+  const tasks = readTask()
+  // list that are todo
+  if(filter === "todo"){
+    console.log(tasks.filter(task => task.status === filter))
+  } 
+  // list that are done
+  else if(filter === "done"){
+    console.log(tasks.filter(task => task.status === filter))
+  }
+  // list that are in progress
+  else if(filter === "in-progress"){
+    console.log(tasks.filter(task => task.status === filter))
+  } 
+  // list all task
+  else if(filter === undefined){
+    console.log(tasks)
+  }
+}
