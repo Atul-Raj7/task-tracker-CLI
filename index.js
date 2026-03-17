@@ -39,14 +39,23 @@ function addTask () {
     description: "We are here for testing",
     completed: false,
     inProgress: false,
-    createdAt: timeStamp,
-    updatedAt: timeStamp
+    createdAt: timeStamp
   }
   tasks.push(newTask)
   writeTask(tasks)
 }
 
 //update
+function updateTask (id, description) {
+  const tasks = readTask()
+  const task = tasks.find(task => task.id === id)
+  if(task){
+     task.description = description,
+     task.updatedAt = timeStamp
+     writeTask(tasks)
+  }
+}
+
 //delete
 //mark of progress and done
 // list all task
