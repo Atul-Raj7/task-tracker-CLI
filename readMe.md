@@ -108,4 +108,4 @@ Pssst! If you scrolled this far, consider ⭐ star this project (●'◡'●)
 Oh I forgot who would ever want to run a task tracker in cli 😆
 </p>
 
-<img src="https://i.pinimg.com/originals/27/9b/86/279b86033d9f8527315188a283fea5f4.gif" width="100%" alt="Vaporwave">
+<img src="https://github.com/user-attachments/assets/1252a208-66ed-498a-91d8-3382abeb7c69" width="100%" alt="Vaporwave">
