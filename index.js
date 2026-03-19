@@ -74,7 +74,7 @@ function deleteTask (id) {
   const tasks = readTask()
   const removeTask = tasks.filter(removeTask => removeTask.id !== id)
   writeTask(removeTask)
-  console.log(`${colors.red}Task Deleted Successsfully.\n${colors.blue}${colors.reset}`)
+  console.log(`${colors.red}Task Deleted Successsfully.${colors.reset}`)
 }
 
 //Marking of Task - inProgress || Done || To-Do
@@ -116,7 +116,7 @@ if(args[0] === "add"){
   const description = args.slice(1).join(" ")
 
   if(!description){
-    console.log(`${colors.blue}Please provide a Description to Add. \n ${colors.yellow}Example ---> node index.js add "Hello World!"${colors.reset}`)
+    console.log(`${colors.yellow}Please provide a Description to Add. \n ${colors.yellow}Example ---> node index.js add "Hello World!"${colors.reset}`)
   }
   else{
     addTask(description)
@@ -127,7 +127,7 @@ else if(args[0] === "update"){
   const id = parseInt(args.slice(1, 2).join(" "))
   const description = args.slice(2).join(" ")
   if(!id && !description){
-    console.log(`${colors.blue}Please provide an ID & Description to Update. \n ${colors.yellow}Example ---> node index.js update 2 "Update Your Orb"${colors.reset}`)
+    console.log(`${colors.yellow}Please provide an ID & Description to Update. \n ${colors.yellow}Example ---> node index.js update 2 "Update Your Orb"${colors.reset}`)
   }
   else{
     updateTask(id, description)
@@ -137,7 +137,7 @@ else if(args[0] === "update"){
 else if(args[0] === "delete"){
   const id = parseInt(args.slice(1).join(" "))
   if(!id){
-    console.log(`${colors.blue}Please provide an ID to Delete \n ${colors.yellow}Example ---> node index.js delete 2${colors.reset}`)
+    console.log(`${colors.yellow}Please provide an ID to Delete \n ${colors.yellow}Example ---> node index.js delete 2${colors.reset}`)
   }
   else{
     deleteTask(id)
