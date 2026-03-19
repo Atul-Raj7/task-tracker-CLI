@@ -24,7 +24,7 @@ git clone https://github.com/Atul-Raj7/task-tracker-CLI.git
 Download ZIP file & extract it at desired location or same as folder location
 
 
-[Link](`https://github.com/Atul-Raj7/task-tracker-CLI/archive/refs/heads/main.zip) 
+[Link](https://github.com/Atul-Raj7/task-tracker-CLI/archive/refs/heads/main.zip) 
 
 > Note: You can click the Code button and select Download ZIP. Both links are same.
 
